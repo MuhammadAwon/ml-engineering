@@ -4,7 +4,7 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 <img src="https://github.com/alexeygrigorev/mlbookcamp-code/raw/master/images/zoomcamp.jpg" width=700 height=400/>
 
-## CONTENT
+## :book: CONTENT
 
 ### 1. [Introduction to Machine Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/01-intro)
 
