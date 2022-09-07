@@ -8,16 +8,7 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 1. [Introduction to Machine Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/01-intro)
 
-- 1.1 Introduction to Machine Learning
-- 1.2 ML vs Rule-Based Systems
-- 1.3 Supervised Machine Learning
-- 1.4 CRISP-DM
-- 1.5 Model Selection Process
-- 1.6 Setting up the Environment
-- 1.7 Introduction to NumPy
-- 1.8 Linear Algebra Refresher
-- 1.9 Introduction to Pandas
-- 1.10 Summary
+Information to be added!
 
 ### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
 
