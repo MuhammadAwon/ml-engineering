@@ -19,7 +19,7 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 1.9 Introduction to Pandas
 - 1.10 Summary
 
-### 2. Machine Learning for Regression
+### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
 
 Information to be added!
 
