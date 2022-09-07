@@ -8,7 +8,6 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 1. [Introduction to Machine Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/01-intro)
 
-<<<<<<< HEAD
 - 1.1 Introduction to Machine Learning
 - 1.2 ML vs Rule-Based Systems
 - 1.3 Supervised Machine Learning
@@ -21,9 +20,6 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 1.10 Summary
 
 ### 2. Machine Learning for Regression
-=======
-### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
->>>>>>> 606387a4ff2178fe01346df1c1ac66cd240cd8c8
 
 Information to be added!
 
