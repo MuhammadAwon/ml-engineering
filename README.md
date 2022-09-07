@@ -6,8 +6,9 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ## CONTENT
 
-### 1. Introduction to Machine Learning
+### 1. [Introduction to Machine Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/01-intro)
 
+<<<<<<< HEAD
 - 1.1 Introduction to Machine Learning
 - 1.2 ML vs Rule-Based Systems
 - 1.3 Supervised Machine Learning
@@ -20,18 +21,21 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 1.10 Summary
 
 ### 2. Machine Learning for Regression
+=======
+### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
+>>>>>>> 606387a4ff2178fe01346df1c1ac66cd240cd8c8
 
 Information to be added!
 
-### 3. Machine Learning for Classification
+### 3. [Machine Learning for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification)
 
 Information to be added!
 
-### 4. Evaluation Metrics for Classification
+### 4. [Evaluation Metrics for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation)
 
 Information to be added!
 
-### 5. Deploying Machine Learning Models
+### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
 Information to be added!
 
@@ -39,27 +43,27 @@ Information to be added!
 
 Information to be added!
 
-### 6. Decision Trees and Ensemble Learning
+### 6. [Decision Trees and Ensemble Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees)
 
 Information to be added!
 
-### 7. Midterm Project
+### 7. [Midterm Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-midterm-project)
 
 Information to be added!
 
-### 8. Neural Networks and Deep Learning
+### 8. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
 
 Information to be added!
 
-### 9. Severless Deep Learning
+### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
 
 Information to be added!
 
-### 10. Kubernetes and TensorFlow Serving
+### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
 Information to be added!
 
-### 11. KServe
+### 11. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
 
 Information to be added!
 
@@ -68,5 +72,9 @@ Information to be added!
 Information to be added!
 
 ### 14. Second Capstone Project (optional)
+
+Information to be added!
+
+### [Homework](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework)
 
 Information to be added!
