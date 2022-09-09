@@ -112,6 +112,8 @@
   - 2-dimensional arrays represent matrices.
   - 3-dimensional arrays represent tensors.
 
+*[NumPy notebook](https://github.com/MuhammadAwon/ml-engineering/blob/main/01-intro/notebooks/07-numpy.ipynb)*
+
 *[NumPy tutorial](https://mlbookcamp.com/article/numpy)*
 
 ## Linear Algebra Refresher
@@ -124,11 +126,15 @@
 - In identity matrix the original matrix is unchanged when we multiply it.
 - The dot product of matrix `A` with the inverse of `A` returns identity matrix `I`.
 
+*[Linear Algebra notebook](https://github.com/MuhammadAwon/ml-engineering/blob/main/01-intro/notebooks/08-linear-algebra.ipynb)*
+
 *We can get a visual demonstration of dot product [here](http://matrixmultiplication.xyz/)*.
 
 ## Introduction to Pandas
 
 - Pandas is a Python library which is build upon NumPy. It is used to analyze and manipulate the tabular data.
 - Pandas main data structures are *DataFrame* and *Series*.
+
+*[Pandas notebook](https://github.com/MuhammadAwon/ml-engineering/blob/main/01-intro/notebooks/09-pandas.ipynb)*
 
 *[Pandas Cheat Sheet](https://www.datacamp.com/cheat-sheet/pandas-cheat-sheet-for-data-science-in-python)*
