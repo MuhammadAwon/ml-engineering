@@ -33,7 +33,7 @@
 ## CRISP-DM
 
 - CRISP-DM stands for Cross-Industry Standard Process for Data Mining and it was invented in 1996.
-- It is a methodology created to shape data mining projects.
+- It is a methodology to organize machine learning projects.
 - CRISP-DM consists of six steps:
 
   1. Business Understanding
@@ -96,7 +96,11 @@
 
   *Note: Steps 2 and 3 are repetitive until we find the best model for our problem*.
 
-- Before using the test data on our final model, we combine the train + validation data then we train the model on this whole dataset.
+- Before using the test data on our selected model, we combine the train + validation data then we train the model on this whole dataset.
+
+## Setting Up the Environment
+
+- MLzoomcamp guide can be found [here](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/01-intro/06-environment.md) to set up the environment.
 
 ## Introduction to NumPy
 
@@ -110,3 +114,21 @@
 
 *[NumPy tutorial](https://mlbookcamp.com/article/numpy)*
 
+## Linear Algebra Refresher
+
+- In machine learning, the *dot product* can be used to calculate the weighted sum of a vector.
+- We need to do the dot product of rows and columns to multiply a matrix by another matrix.
+- The dot product is where we multiply the matching members of *row vector (u)* with *column vector (v)*, then we sum them all up which returns a scalar (i.e, a number).
+- To multiply a `3 x 2` matrix by a `2 x 3` matrix, the inner dimensions of two matrices (in our case `2s`) must be the same, and the result will be a `3 x 3` matrix.
+- Identity matrix (denoted by I) is matrix equivalent to 1. It has same number of rows and columns (aka square matrix), where it has `1s` on the main diagonal and `0s` everywhere else.
+- In identity matrix the original matrix is unchanged when we multiply it.
+- The dot product of matrix `A` with the inverse of `A` returns identity matrix `I`.
+
+*We can get a visual demonstration of dot product [here](http://matrixmultiplication.xyz/)*.
+
+## Introduction to Pandas
+
+- Pandas is a Python library which is build upon NumPy. It is used to analyze and manipulate the tabular data.
+- Pandas main data structures are *DataFrame* and *Series*.
+
+*[Pandas Cheat Sheet](https://www.datacamp.com/cheat-sheet/pandas-cheat-sheet-for-data-science-in-python)*
