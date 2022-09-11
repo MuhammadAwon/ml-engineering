@@ -20,7 +20,23 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
 
-Information to be added!
+- 2.1 Car Price Prediction Project
+- 2.2 Data Preparation
+- 2.3 Exploratory Data Analysis
+- 2.4 Setting Up the Validation Framework
+- 2.5 Linear Regression
+- 2.6 Linear Regression: Vector Form
+- 2.7 Training Linear Regression: Normal Equation
+- 2.8 Baseline Model for Car Price Prediction Project
+- 2.9 Root Mean Squared Error
+- 2.10 Using RMSE on Validation Data
+- 2.11 Feature Engineering
+- 2.12 Categorical Variables
+- 2.13 Regularization
+- 2.14 Tuning the Model
+- 2.15 Using the Model
+- 2.16 Car Price Prediction Project Summary
+- 2.17 Explore More
 
 ### 3. [Machine Learning for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification)
 
