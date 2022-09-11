@@ -1,6 +1,6 @@
-# Introduction to Machine Learning
+# 1. Introduction to Machine Learning
 
-## What is Machine Learning
+## 1.1 What is Machine Learning
 
 - Machine Learning is extracting information about the data and making predictions.
 - The data has two types:
@@ -9,7 +9,7 @@
 - A machine learning model encapsulates the patterns of the features and makes predictions based on the target values.
 - The predictions can't be 100 percent correct but more or less correct.
 
-## Machine Learning vs Rule-Based System
+## 1.2 Machine Learning vs Rule-Based System
 
 - In a rule-based system, we have the input data with the set of rules to get the output.
 - In machine learning, we have the input and output data, and the model defines the rules.
@@ -18,7 +18,7 @@
 - We first train the model by providing features and target variables (known as train data), where the model learns the patterns to map the corresponding target value.
 - To make predictions, the trained model only uses the features to find the correct output.
 
-## Supervised Machine Learning
+## 1.3 Supervised Machine Learning
 
 - Supervised Learning is a type of machine learning where we teach the model by providing features and the target variable.
 - Two main types of supervised learning are - classification and regression problems.
@@ -30,7 +30,7 @@
 - When we make predictions in a regression problem, the model outputs the number.
 - Another classification problem is recommendation systems which predict the rating or ranking of something.
 
-## CRISP-DM
+## 1.4 CRISP-DM
 
 - CRISP-DM stands for Cross-Industry Standard Process for Data Mining and it was invented in 1996.
 - It is a methodology to organize machine learning projects.
@@ -83,7 +83,7 @@
 
 - ML projects require many iterations. The best practice is to start from simple, learn from the feedback, and improve.
 
-## The Model Selection Process
+## 1.5 The Model Selection Process
 
 - There are six steps involve in model selection process:
 
@@ -98,11 +98,11 @@
 
 - Before using the test data on our selected model, we combine the train + validation data then we train the model on this whole dataset.
 
-## Setting Up the Environment
+## 1.6 Setting Up the Environment
 
 - MLzoomcamp guide can be found [here](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/01-intro/06-environment.md) to set up the environment.
 
-## Introduction to NumPy
+## 1.7 Introduction to NumPy
 
 - NumPy stands for Numerical Python. It is a Python library that performs numerical calculations.
 - NumPy is written in C language that makes is very fast.
@@ -116,7 +116,7 @@
 
 *[NumPy tutorial](https://mlbookcamp.com/article/numpy)*
 
-## Linear Algebra Refresher
+## 1.8 Linear Algebra Refresher
 
 - In machine learning, the *dot product* can be used to calculate the weighted sum of a vector.
 - We need to do the dot product of rows and columns to multiply a matrix by another matrix.
@@ -130,7 +130,7 @@
 
 *We can get a visual demonstration of dot product [here](http://matrixmultiplication.xyz/)*.
 
-## Introduction to Pandas
+## 1.9 Introduction to Pandas
 
 - Pandas is a Python library which is build upon NumPy. It is used to analyze and manipulate the tabular data.
 - Pandas main data structures are *DataFrame* and *Series*.
