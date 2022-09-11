@@ -5,7 +5,7 @@
 - Machine Learning is extracting information about the data and making predictions.
 - The data has two types:
   - Features - they are the characteristics or the attributes of an object. They are the independent variables of the data.
-  - Target - it is the actual value of an object that model tries to predict based on the features. It is the dependent variable of the data.
+  - Target - it is used to find relationship based on the features. It is a dependent variable.
 - A machine learning model encapsulates the patterns of the features and makes predictions based on the target values.
 - The predictions can't be 100 percent correct but more or less correct.
 
@@ -36,12 +36,12 @@
 - It is a methodology to organize machine learning projects.
 - CRISP-DM consists of six steps:
 
-  1. Business Understanding
-  2. Data Understanding
-  3. Data Preparation
-  4. Modeling
-  5. Evaluation
-  6. Deployment
+  1. Business Understanding.
+  2. Data Understanding.
+  3. Data Preparation.
+  4. Modeling.
+  5. Evaluation.
+  6. Deployment.
 
 - Steps in **Business Understanding**:
   - Identify the business problem and understand how we can solve it.
