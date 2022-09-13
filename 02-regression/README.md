@@ -66,7 +66,7 @@ $x_{i1}.w_1 + x_{i2}.w_2 + ... + x_{in}.w_n$
 So the simple linear regression formula looks like this: $g(x_i) = w_0 + x_{i1}.w_1 + x_{i2}.w_2 + ... + x_{in}.w_n$
 
 Which can be simplify further:
-$g(x_i) = w_0 + \sum_{j=1}^{n} w_j.x_{ij}$
+$g(x_i) = w_0 + \displaystyle\sum_{j=1}^{n} w_j.x_{ij}$
 
 We need to assure that the result is shown on the untransformed scale by using the inverse function `exp()`.
 
