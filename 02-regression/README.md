@@ -64,7 +64,6 @@ So the simple linear regression formula looks like this: $g(x_i) = w_0 + x_{i1}.
 Which can be simplify further:
 $g(x_i) = w_0 + \sum_{j=1}^{n}w_j.w_{ij}$
 
-
 We need to assure that the result is shown on the untransformed scale by using the inverse function `exp()`.
 
 ## 2.6 Linear Regression Vector
