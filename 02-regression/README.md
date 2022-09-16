@@ -73,3 +73,37 @@ We need to assure that the result is shown on the untransformed scale by using t
 The formula of linear regression can be synthesized with the dot projuct between features and weights. The feature vector includes the *bias* term with an *x* value of one, such as $w_{0}^{x_{i0}},\ where\ x_{i0} = 1\ for\ w_0$.
 
 When all the records are included, the linear regression can be calculated with the dot product between ***feature matrix*** and ***vector of weights***, obtaining the `y` vector of predictions.
+
+## 2.7 Training Linear Regression: Normal Equation
+
+Obtaining predictions as close as possible to `y` target values requires the calculation of weights from the general linear regression equation. The feature matrix `X` does not have an inverse because usually it is not square, so it is required to obtain an approximate solution, which can be obtained using the **Gram matrix** (multiplication of feature matrix and its transpose, $X^TX$). The vector of weights or coefficients obtained with this formula is the closest possible solution to the linear regression system.
+
+## 2.8 Baseline Model for Car Price Prediction Project
+
+The linear regression model obtained prevously was used with the dataset of car price prediction. For this model, only the numerical variables were considered. The training data was pre-processed, replacing the `NaN` values with `0`, in such a way that these values were omitted by the model. Then, the model was trained and it allowed to make predictions were compared by plotting their histograms.
+
+## 2.9 Root Mean Squared Error
+
+The RMSE is a measure of the error associated with a model for regression tasks. It is used the interpret the results and to find the accuracy of the model.
+
+## 2.10 Using RMSE on Validation Data
+
+Calculation of the RMSE on validation partition of the dataset of car price prediction. In this way, we have a metric of evaluate the model's performance.
+
+## 2.11 Feature Engineering
+
+Feature engineering is the process of creating new features.
+
+## 2.12 Categorical Variables
+
+Categorical variables are typically strings, and Pandas identify them as `object` types. These variables need to be converted to a numerical form because the machine learning models can interpret only numerical features. It is possible to incorporate certain categories from a feature, not necessarily all of them. This transformation from categorical to numerical variable is known as One-Hot encoding.
+
+## 2.13 Regularization
+
+If the feature matrix has duplicated columns, it does not have an inverse matrix. But, sometimes this error could be passed if certain values are slightly different between duplicated columns.
+
+So, if we apply the normal equation with this feature matrix, the values associated with duplicated columns are very large, which decrease the model performance. To solve this issue, one alternative is adding a small number to the diagonal of the feature matrix, which corresponds to regularization.
+
+This technique works because the addition of small values to the diagonal makes it less likely to have duplicated columns. The regularization value is a parameter of the model. After applying regularization the model performance improved.
+
+## 2.14 
