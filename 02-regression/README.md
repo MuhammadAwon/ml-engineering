@@ -124,4 +124,26 @@ So, if we apply the normal equation with this feature matrix, the values associa
 
 This technique works because the addition of small values to the diagonal makes it less likely to have duplicated columns. The regularization value is a parameter of the model. After applying regularization the model performance improved.
 
-## 2.14 
+## 2.14 Tuning the Model
+
+The model tuning consists of finding the best regularization value, using the validation partition of the dataset. After obtaining the best regularization value, the model will be trained with this regularization parameter.
+
+## 2.15 Using the Model on Test Data
+
+After finding the best model and its parameters, it is trained with training and validation partitions combined and the final evaluation is calculated on the test partition. Finally, the final model is used to predict the price of new car(s).
+
+## 2.16 Car Price Prediction Project Summary
+
+In summary, this session covered some topics, including data preparation, exploratory data analysis, the validation framework, linear regression model, LR vector and normal forms, the baseline model, root mean squared error, feature engineering, regularization, tuning the model, and using the best model with new data. All these concepts were explained using the problem to predict the price of cars.
+
+## 2.17 Explore More
+
+- In this project, we included only top 5 features. What happens if we include 10?
+
+### Other Projects
+
+Here are the other datasets that we can play with to learn more about the topic:
+
+- [California housing dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html) - predict the price of a house
+- [Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance) - predict the performance of students
+- UCI ML Repository contains a lot of other datasets suitable for practicing regression - https://archive.ics.uci.edu/ml/datasets.php?task=reg
