@@ -82,7 +82,6 @@ def linear_regression(xi):
     return pred
 ```
         
-
 If we look at the $\displaystyle\sum_{j=1}^{n} w_j \cdot x_{ij}$ part in the above equation, we know that this is nothing else but a vector-vector multiplication. Hence, we can rewrite the equation as $g(x_i) = w_0 + x_i^T \cdot w$
 
 We need to assure that the result is shown on the untransformed scale by using the inverse function `exp()`.  
