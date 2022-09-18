@@ -20,23 +20,23 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 2. [Machine Learning for Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression)
 
-- 2.1 Car Price Prediction Project
-- 2.2 Data Preparation
-- 2.3 Exploratory Data Analysis
-- 2.4 Setting Up the Validation Framework
-- 2.5 Linear Regression
-- 2.6 Linear Regression: Vector Form
-- 2.7 Training Linear Regression: Normal Equation
-- 2.8 Baseline Model for Car Price Prediction Project
-- 2.9 Root Mean Squared Error
-- 2.10 Using RMSE on Validation Data
-- 2.11 Feature Engineering
-- 2.12 Categorical Variables
-- 2.13 Regularization
-- 2.14 Tuning the Model
-- 2.15 Using the Model
-- 2.16 Car Price Prediction Project Summary
-- 2.17 Explore More
+- [2.1 Car Price Prediction Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#21-car-price-prediction-project)
+- [2.2 Data Preparation](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#22-data-preparation)
+- [2.3 Exploratory Data Analysis](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#23-exploratory-data-analysis)
+- [2.4 Setting Up the Validation Framework](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#24-setting-up-the-validation-framework)
+- [2.5 Linear Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#25-linear-regression-simple)
+- [2.6 Linear Regression: Vector Form](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#26-linear-regression-vector)
+- [2.7 Training Linear Regression: Normal Equation](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#27-training-linear-regression-normal-equation)
+- [2.8 Baseline Model for Car Price Prediction Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#28-baseline-model-for-car-price-prediction-project)
+- [2.9 Root Mean Squared Error](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#29-root-mean-squared-error)
+- [2.10 Using RMSE on Validation Data](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#210-using-rmse-on-validation-data)
+- [2.11 Feature Engineering](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#211-feature-engineering)
+- [2.12 Categorical Variables](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#212-categorical-variables)
+- [2.13 Regularization](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#213-regularization)
+- [2.14 Tuning the Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#214-tuning-the-model)
+- [2.15 Using the Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#215-using-the-model-on-test-data)
+- [2.16 Car Price Prediction Project Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#216-car-price-prediction-project-summary)
+- [2.17 Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/02-regression#217-explore-more)
 
 ### 3. [Machine Learning for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification)
 
