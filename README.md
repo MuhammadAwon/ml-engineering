@@ -40,7 +40,20 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 3. [Machine Learning for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification)
 
-Information to be added!
+- 3.1 Chrun Prediction Project
+- 3.2 Data Preparation
+- 3.3 Setting Up the Validation Framework
+- 3.4 EDA
+- 3.5 Feature Importance: Churn Rate and Risk Ratio
+- 3.6 Feature Importance: Mutual Information
+- 3.7 Feature Importance: Correlation
+- 3.8 One-Hot Encoding
+- 3.9 Logistic Regression
+- 3.10 Training Logistic Regression with Scikit-Learn
+- 3.11 Model Interpretation
+- 3.12 Using the Model
+- 3.13 Summary
+- 3.14 Explore More
 
 ### 4. [Evaluation Metrics for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation)
 
