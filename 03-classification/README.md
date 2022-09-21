@@ -68,3 +68,90 @@ The EDA for this project consists of:
 
 ## 3.6 Feature Importance: Mutual Information
 
+Mutual information is a concept from information theory, which measures how much we can learn about one varaible if we know the value of another. In this project, we can think of this as how much do we learn about churn if we have the information from a particular feature. So, it is a measure of the importance of a categorical variable.
+
+**Classes, functions, and methods**:
+
+- `mutual_info_score(x,y)` - Scikit-Learn class for calculating the mutual information between the x target variable and y feature
+- `df[x].apply(y)` - apply a y function to the x series of the dataframe
+- `df.sort_values(ascending=False).to_frame(name='x')` - sort values in decending order and called the column as x.
+
+## 3.7 Feature Importance: Correlation
+
+**Correlation coefficient** measures the degree of dependency between two variables. This value is negative if one variable grows while the other decreases, and it is positive if both variables increase. Depending on its size, the dependency between both variables could be low, moderate, or strong. It allows measuring the importance of numerical variables. If the correlation between two variables are $0.0\ to \pm0.2$ their relationship is low, if it is $\pm0.2\ to \pm0.5$ the relationship is moderate, and if the correlation is between $\pm0.6\ to \pm1.0$ then it is a strong relationship.
+
+**Functions and methods**:
+
+- `df[x].corrwith(y)` - return the correlation between x and y series
+
+## 3.8 One-Hot Encoding
+
+One-Hot Encoding allows encoding categorical variables in numerical ones. This method represents each category of a variable as one column, and a 1 is assigned if the value belongs to the category or 0 otherwise.
+
+**Classes, functions, and methods**:
+
+- `df[x].to_dict(oriented='records')` - convert x series to dictionaries, oriented by rows
+- `DictVectorizer().fit_transform(x)` - Scikit-Learn class for converting x dictionaries into a spare matrix, and in this way doing the one-hot encoding. It does not affect the numerical variables. Passing `sparse=False` in the vectorizer will return the one-hot encoded matrix.
+- `DictVectorizer().get_feature_names()` - returns the names of the columns in the sparse matrix
+
+## 3.9 Logistic Regression
+
+In general, supervised models can be represented with this formula: $g(x_{i}) = y_{i}$
+
+Depending on what is the type of target variable, the supervised task can be regression or classification (binary or multiclass). Binary classification tasks can have negative (0) or positive (1) target values. The output of these models is the probability of $x_i$ belonging to the positive class.
+
+Logistic regression is similar to linear regression because both models take into account the bias term and the weighted sum of features. The difference between these models is that the outputs a value between zero and one, applying the sigmoid function to the linear regression formula.
+
+$$g(x_i) = Sigmoid(w_0 + w_1x_1 + w_2x_2 + ... +w_nx_x)$$
+$$Sigmoid=\frac{1}{1 + exp^{(-z)}}$$
+
+In this way, the sigmoid function allows transforming a score into a probability.
+
+## 3.10 Training Logistic Regression with Scikit-Learn
+
+This section is about training a logistic regression model with Scikit-Learn, applying it to the validation dataset, and calculating its accuracy.
+
+**Classes, functions, and methods**:
+
+- `LogisticRegression().fit_transform(x)` - Scikit-Learn class for calculating the logistic regression model
+- `LogisticRegression().coef_[0]` - return the coefficients or weights of the LR model
+- `LogisticRegression().intercept_[0]` - return the bias or intercept of the LR model
+- `LogisticRegression().predict[x]` - make predictions on the x dataset (0 *or* 1) - hard predictions
+- `LogisticRegression().predict_proba[x]` - make predictions on the x dataset and return two columns with their probabilities for the two categories (0 *and* 1) - soft predictions
+
+## 3.11 Model Interpretation
+
+Model interpretation is about intercept and coefficients. In the formula of the logistic regression model, only one of the one-hot ecoded categories is multiplied by 1 (means has weight), and the other by 0 (means no weight). In this way, we only consider the appropriate category for each categorical feature.
+
+**Classes, functions, and methods**:
+
+- `list(zip(x, y))` - return a new list of tuples with elements from x jointed with their corresponding elements on y
+- `dict(zip(x, y))` - return a dict with x elements as key and the corresponding elements of y as value
+
+## 3.12 Using the Model
+
+For final model, we train the logistic regression model with the full training dataset (training + validation), considering numerical and categorical features. Thus, predictions are made on the test dataset, and we evaluate the model using the accuracy metric.
+
+In the case, when the predictions of validation and test are similar, it means that the model is working well.
+
+## 3.13 Summary
+
+This project is about predicting churn rate of customers from a company. We learned the feature importance of categorical variables, including risk ratio, mutual information, and correlation coefficient of numerical variables. Also, we understood one-hot encoding and implemented logistic regression with Scikit-Learn.
+
+## 3.14 Explore More
+
+More things
+
+- Try to exclude least useful features
+
+Use scikit-learn in project of last week
+
+- Re-implement train/val/test split using scikit-learn in the project from the last week
+- Also, instead of our own linear regression, use `LinearRegression` (not regularized) and `RidgeRegression` (regularized). Find the best regularization parameter for Ridge
+- There are other ways to implement one-hot encoding. E.g. using the `OneHotEncoding` class. Check how to use it [here](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/03-classification/notebook-scaling-ohe.ipynb).
+- Sometimes numerical features requeire scaling, especially for iterative solves like "lbfgs". Check how to use StandardScaler for that [here](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/03-classification/notebook-scaling-ohe.ipynb).
+
+Other projects
+
+- Lead scoring - https://www.kaggle.com/ashydv/leads-dataset
+- Default prediction - https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients
