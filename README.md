@@ -40,24 +40,32 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 3. [Machine Learning for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification)
 
-- 3.1 Chrun Prediction Project
-- 3.2 Data Preparation
-- 3.3 Setting Up the Validation Framework
-- 3.4 EDA
-- 3.5 Feature Importance: Churn Rate and Risk Ratio
-- 3.6 Feature Importance: Mutual Information
-- 3.7 Feature Importance: Correlation
-- 3.8 One-Hot Encoding
-- 3.9 Logistic Regression
-- 3.10 Training Logistic Regression with Scikit-Learn
-- 3.11 Model Interpretation
-- 3.12 Using the Model
-- 3.13 Summary
-- 3.14 Explore More
+- 3.1 [Chrun Prediction Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#31-churn-project)
+- 3.2 [Data Preparation](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#32-data-preparation)
+- 3.3 [Setting Up the Validation Framework](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#33-setting-up-the-validation-framework)
+- 3.4 [EDA](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#34-eda)
+- 3.5 [Feature Importance: Churn Rate and Risk Ratio](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#35-feature-importance-churn-rate-and-risk-ratio)
+- 3.6 [Feature Importance: Mutual Information](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#36-feature-importance-mutual-information)
+- 3.7 [Feature Importance: Correlation](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#37-feature-importance-correlation)
+- 3.8 [One-Hot Encoding](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#38-one-hot-encoding)
+- 3.9 [Logistic Regression](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#39-logistic-regression)
+- 3.10 [Training Logistic Regression with Scikit-Learn](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#310-training-logistic-regression-with-scikit-learn)
+- 3.11 [Model Interpretation](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#311-model-interpretation)
+- 3.12 [Using the Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#312-using-the-model)
+- 3.13 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#313-summary)
+- 3.14 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/03-classification#314-explore-more)
 
 ### 4. [Evaluation Metrics for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation)
 
-Information to be added!
+- 4.1 Evaluation Metrics: Session Overview
+- 4.2 Accuracy and Dummy Model
+- 4.3 Confusion Table
+- 4.4 Precision and Recall
+- 4.5 ROC Curves
+- 4.6 ROC AUC
+- 4.7 Cross-Validation
+- 4.8 Summary
+- 4.9 Explore More
 
 ### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
@@ -101,4 +109,6 @@ Information to be added!
 
 ### [Homework](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework)
 
-Information to be added!
+- [HW1](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session1/session1-homework.ipynb)
+- [HW2](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session2/session2-homework.ipynb)
+- [HW3](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session3/session3-homework.ipynb)
