@@ -44,15 +44,36 @@ The **accuracy** corresponds to the sum of TN and TP divided by the number of to
 
 ## 4.4 Precision and Recall
 
-**Precision** tells us the fraction of positive predictions that are correct. It takes into account only the **positive class** (TP and FP - second column of the confusion matrix), as is stated in the following formula:
+**Precision** tells us the fraction of positive predictions that are correct. It takes into account only the **positive class** (FP and TP - second column of the confusion matrix), as is stated in the following formula:
 j
-$$\frac{TP}{TP + FP}$$
+$$\frac{TP}{FP + TP}$$
 
-**Recall** measures the fraction of correctly identified positive instances. It considers parts of the **positive and negative classes** (TP and FN - second row of confusion table). The formula of this metric is presented below:
+**Recall** measures the fraction of correctly identified positive instances. It considers parts of the **positive and negative classes** (FN and TP - second row of confusion table). The formula of this metric is presented below:
 
-$$\frac{TP}{TP + FN}$$
+$$\frac{TP}{FN + TP}$$
 
 In this problem, the precision and recall values were 67% and 54% respectively. So, these measures reflect some errors of our model that accuracy did not notice due to the **class imbalance**.
 
 ## 4.5 ROC Curves
+
+ROC stands for Receiver Operating Characteristic, and this idea was applied during the Second World War for evaluating the strenght of radio detectors for planes. This measure considers **False Positive Rate** (FPR) and **True Positive Rate** (TPR), which are derived from the values of the confusion matrix.
+
+**FPR** is the fraction of false positives (FP) divided by the total number of negatives (TN and FP - the first row of confusion matrix), and we want to minimize it. The formula of FPR is the following:
+
+$$\frac{FP}{TN + FP}$$
+
+On the other hand, **TPR** or **Recall** is the fraction of true positives (TP) divided by the total number of positives (FN and TP - second row of confusion matrix), and we want to maximize this metric. The formula of this measure is presented below:
+
+$$\frac{TP}{FN + TP}$$
+
+ROC curves consider TPR and FPR under all the possible thresholds. If the threshold is 0 or 1, the TPR and FPR scores are the opposite of the threshold (1 and 0 respectively), but they have different meanings, as we explained before.
+
+We need to compare the ROC curves against a point of reference to evaluate its performance, so the corresponding curves of random and ideal models are required. It is possible to plot the ROC curves with FPR and TPR scores vs thresholds, or FPR vs TPR.
+
+**Classes and methods**:
+
+- `np.repeat([x, y], [i, j])` - returns a numpy array with an i number of x values, and a j number of y values
+- `roc_curve(x, y)` - sklearn.metrics class for calculating the false positive rates, true positive rates, and thresholds, given a target x dataset and a predicted y dataset
+
+## 4.7 ROC AUC
 
