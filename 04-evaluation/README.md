@@ -100,4 +100,23 @@ In general, if the dataset is large, we should use the hold-out validation datas
 - `Kfold.split(x)` - sklearn.Kfold method for splitting the x dataset with the attributes established in the Kfold's object construction
 - `for i in tqdm()` - library for showing the progress of each i iteration in a for loop
 
-**Extra resource**: `Kfold()` class returns the iterator, whereas `Kfold.split()` method generate indices to split data into training and test set. The difference between iterator and generatorcan be read [here](https://www.google.com/search?q=python+iterators+and+generators) .
+**Extra resource**: `Kfold()` class returns the iterator, whereas `Kfold.split()` method generate indices to split data into training and test set. The difference between iterator and generatorcan be read [here](https://www.google.com/search?q=python+iterators+and+generators).
+
+## 4.8 Summary
+
+General definitions:
+
+- **Metric**: A single number that describes the performance of a model
+- **Accuracy**: Fraction of correct answers; sometimes misleading
+- **Precision** and **Recall** are less misleading when we have class imbalance
+- **ROC Curve**: A way to evaluate the performance at all thresholds; it is okay to use with imbalance class
+- **K-Fold CV**: More reliable estimate for performance (mean + std)
+
+In brief, this session is about different metrics to evaluate a binary classifier. These measures include accuracy, confusion table, precision, recall, ROC curves (TPR, FPR, random model, and ideal model), and AUROC. Also, in this session, we talked about a different way to estimate the performance of the model and make the parameter tuning with cross-validation.
+
+## 4.9 Explore More
+
+- Check the precision and recall of the dummy classifier that always predict "FALSE"
+- F1 = $\frac{2*Precision*Recall}{Precision+Recall}$
+- Evaluate precision and recall at different thresholds, plot P vs R - this way we'll get the precision/recall curve (similar to ROC curve)
+- Area under the PR curve is also a useful metric
