@@ -57,15 +57,15 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 4. [Evaluation Metrics for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation)
 
-- 4.1 Evaluation Metrics: Session Overview
-- 4.2 Accuracy and Dummy Model
-- 4.3 Confusion Table
-- 4.4 Precision and Recall
-- 4.5 ROC Curves
-- 4.6 ROC AUC
-- 4.7 Cross-Validation
-- 4.8 Summary
-- 4.9 Explore More
+- 4.1 [Evaluation Metrics: Session Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#41-evaluation-metrics-session-overview)
+- 4.2 [Accuracy and Dummy Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#42-accuracy-and-dummy-model)
+- 4.3 [Confusion Table](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#43-confusion-table)
+- 4.4 [Precision and Recall](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#44-precision-and-recall)
+- 4.5 [ROC Curves](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#45-roc-curves)
+- 4.6 [ROC AUC](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#46-roc-auc)
+- 4.7 [Cross-Validation](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#47-cross-validation)
+- 4.8 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#48-summary)
+- 4.9 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#49-explore-more)
 
 ### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
