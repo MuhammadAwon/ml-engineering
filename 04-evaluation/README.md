@@ -75,5 +75,29 @@ We need to compare the ROC curves against a point of reference to evaluate its p
 - `np.repeat([x, y], [i, j])` - returns a numpy array with an i number of x values, and a j number of y values
 - `roc_curve(x, y)` - sklearn.metrics class for calculating the false positive rates, true positive rates, and thresholds, given a target x dataset and a predicted y dataset
 
-## 4.7 ROC AUC
+## 4.6 ROC AUC
 
+The Area under the ROC curves can tell us how good is our model with a single value. The AUROC of a random model is 0.5, while for an ideal one is 1.
+
+In the words, AUC can be interpreted as the probability that a randomly selected positive example has a greater score than a randomly selected negative example.
+
+**Classes and methods**:
+
+- `auc(x, y)` - sklearn.metrics class for calculating area under the curve of the x and y. Where x is the false positive rate and y is the true positive rate
+- `roc_auc_score(x, y)` - sklearn.metrics class for calculating area under the ROC curves of the x and y. Where x is the target variable and y is the model predictions.
+
+## 4.7 Cross-Validation
+
+**Cross-validation** refers to evaluating the same model on different subsets of a dataset, gettting the average prediction, and spread (standard deviation) within predictions. This method is applied in the **parameter tuning** step, which is the process of selecting the best parameter.
+
+In this algorithm, the full training dataset is divided into **k partitions**, we train the model in k-1 partitions of this dataset and evaluate it on the remaining subset. Then, we end up evaluating the model in all the k folds, and we calculate the average evaluation metric for all the folds.
+
+In general, if the dataset is large, we should use the hold-out validation dataset strategy. On the other hand, if the dataset is small or we want to know the standard deviation of the model (how stable is the model?) across different folds, we can use the cross-validation approach.
+
+**Libraries, classes and methods**:
+
+- `Kfold(k, s, x)` - sklearn.model_selection class for calculating the cross validation with k folds, s boolean attribute for shuffle decisions, and an x random state
+- `Kfold.split(x)` - sklearn.Kfold method for splitting the x dataset with the attributes established in the Kfold's object construction
+- `for i in tqdm()` - library for showing the progress of each i iteration in a for loop
+
+**Extra resource**: `Kfold()` class returns the iterator, whereas `Kfold.split()` method generate indices to split data into training and test set. The difference between [iterator and generator](https://www.google.com/search?q=python+iterators+and+generators) can be read here.
