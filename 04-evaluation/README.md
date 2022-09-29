@@ -100,4 +100,4 @@ In general, if the dataset is large, we should use the hold-out validation datas
 - `Kfold.split(x)` - sklearn.Kfold method for splitting the x dataset with the attributes established in the Kfold's object construction
 - `for i in tqdm()` - library for showing the progress of each i iteration in a for loop
 
-**Extra resource**: `Kfold()` class returns the iterator, whereas `Kfold.split()` method generate indices to split data into training and test set. The difference between [iterator and generator](https://www.google.com/search?q=python+iterators+and+generators) can be read here.
+**Extra resource**: `Kfold()` class returns the iterator, whereas `Kfold.split()` method generate indices to split data into training and test set. The difference between iterator and generatorcan be read [here](https://www.google.com/search?q=python+iterators+and+generators) .
