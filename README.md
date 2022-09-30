@@ -69,7 +69,15 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
-Information to be added!
+- 5.1 Session Overview
+- 5.2 Saving and Loading the Model
+- 5.3 Web Services: Introduction to Flask
+- 5.4 Serving the Churn Model with Flask
+- 5.5 Python Virtual Environment: Pipenv
+- 5.6 Environment Management: Docker
+- 5.7 Deployment to the Cloud: AWS Elastic Beanstalk (optional)
+- 5.8 Summary
+- 5.9 Explore More
 
 ### 5b. BentoML
 
