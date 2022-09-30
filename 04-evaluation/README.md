@@ -117,6 +117,6 @@ In brief, this session is about different metrics to evaluate a binary classifie
 ## 4.9 Explore More
 
 - Check the precision and recall of the dummy classifier that always predict "FALSE"
-- F1 = $\frac{2*Precision*Recall}{Precision+Recall}$
+- F1 = 2 * Precision * Recall / Precision + Recall
 - Evaluate precision and recall at different thresholds, plot P vs R - this way we'll get the precision/recall curve (similar to ROC curve)
 - Area under the PR curve is also a useful metric
