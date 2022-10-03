@@ -57,7 +57,7 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 4. [Evaluation Metrics for Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation)
 
-- 4.1 [Evaluation Metrics: Section Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#41-evaluation-metrics-session-overview)
+- 4.1 [Evaluation Metrics: Session Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#41-evaluation-metrics-session-overview)
 - 4.2 [Accuracy and Dummy Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#42-accuracy-and-dummy-model)
 - 4.3 [Confusion Table](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#43-confusion-table)
 - 4.4 [Precision and Recall](https://github.com/MuhammadAwon/ml-engineering/tree/main/04-evaluation#44-precision-and-recall)
@@ -69,7 +69,7 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
-- 5.1 Section Overview
+- 5.1 Session Overview
 - 5.2 Saving and Loading the Model
 - 5.3 Web Services: Introduction to Flask
 - 5.4 Serving the Churn Model with Flask

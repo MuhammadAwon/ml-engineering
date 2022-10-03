@@ -1,8 +1,8 @@
 # 4. Evaluation Metrics for Classification
 
-## 4.1 Evaluation Metrics: Section Overview
+## 4.1 Evaluation Metrics: Session Overview
 
-This section is about differenct metrics to evaluate a binary classifier. These measures include accuracy, confusion table, precision, recall, ROC curves (TPR, FRP, random model, and ideal model), AUROC, and cross-validation.
+This session is about differenct metrics to evaluate a binary classifier. These measures include accuracy, confusion table, precision, recall, ROC curves (TPR, FRP, random model, and ideal model), AUROC, and cross-validation.
 
 ## 4.2 Accuracy and Dummy Model
 
@@ -112,7 +112,7 @@ General definitions:
 - **ROC Curve**: A way to evaluate the performance at all thresholds; it is okay to use with imbalance class
 - **K-Fold CV**: More reliable estimate for performance (mean + std)
 
-In brief, this section is about different metrics to evaluate a binary classifier. These measures include accuracy, confusion table, precision, recall, ROC curves (TPR, FPR, random model, and ideal model), and AUROC. Also, in this section, we talked about a different way to estimate the performance of the model and make the parameter tuning with cross-validation.
+In brief, this session is about different metrics to evaluate a binary classifier. These measures include accuracy, confusion table, precision, recall, ROC curves (TPR, FPR, random model, and ideal model), and AUROC. Also, in this session, we talked about a different way to estimate the performance of the model and make the parameter tuning with cross-validation.
 
 ## 4.9 Explore More
 
