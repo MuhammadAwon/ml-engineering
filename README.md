@@ -2,7 +2,7 @@
 
 This repository contains all the coursework I am going through from [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp), which includes projects, notebooks, notes, and homework.
 
-<img src="https://github.com/alexeygrigorev/mlbookcamp-code/raw/master/images/zoomcamp.jpg" width=700 height=400/>
+<img src="https://github.com/alexeygrigorev/mlbookcamp-code/raw/master/images/zoomcamp.jpg" />
 
 ## :book: CONTENT
 
