@@ -63,3 +63,92 @@ This section is about what is a web service and how to create a simple web servi
 
 ## 5.4 Serving the Churn Model with Flask
 
+In this section we'll implement the functionality of prediction to our churn web service and how to make it usable in development environment.
+
+- To make the web service predict the churn value for each customer we must modify the code in section 3 with the code we had previously. Below we can see how the code works in order to predict the churn value.
+- In order to predict we first need to load the previously saved model and use a prediction function in a special route.
+  - To load the previously saved model we use the code below:
+    - ```python
+      import pickle
+
+      with open('churn-model.bin', 'rb') as f_in:
+        dv, model = pickle.load(f_in)
+      ```
+  - To predict the value for a customer we need a function like below:
+    - ```python
+      def predict_single(customer, dv, model):
+        X = dv.transform([customer])  ## apply the one-hot encoding feature to the customer data 
+        y_pred = model.predict_proba(X)[:, 1]
+        return y_pred[0]
+      ```
+  - Then at last we make the final function used for creating the web service:
+    - ```python
+      @app.route('/predict', methods=['POST'])  ## in order to send the customer information we need to post its data.
+      def predict():
+      customer = request.get_json()  ## web services work best with json frame, So after the user post its data in json format we need to access the body of json.
+
+      prediction = predict_single(customer, dv, model)
+      churn = prediction >= 0.5
+
+      result = {
+          'churn_probability': float(prediction), ## we need to convert numpy data into python data for flask framework
+          'churn': bool(churn),  ## same as the line above, converting the data using bool method
+      }
+
+      return jsonify(result)  ## send back the data in json format to the user
+      ```
+  - The whole code above is available in the link: ???? (predict.py)
+  - At last we run the code to see the result. It can't use a simple request in web browser, therefore, we can run the following code to post a new user data and see the response:
+    - ```python
+      ## a new customer informations
+      customer = {
+        'customerid': '8879-zkjof',
+        'gender': 'female',
+        'seniorcitizen': 0,
+        'partner': 'no',
+        'dependents': 'no',
+        'tenure': 41,
+        'phoneservice': 'yes',
+        'multiplelines': 'no',
+        'internetservice': 'dsl',
+        'onlinesecurity': 'yes',
+        'onlinebackup': 'no',
+        'deviceprotection': 'yes',
+        'techsupport': 'yes',
+        'streamingtv': 'yes',
+        'streamingmovies': 'yes',
+        'contract': 'one_year',
+        'paperlessbilling': 'yes',
+        'paymentmethod': 'bank_transfer_(automatic)',
+        'monthlycharges': 79.85,
+        'totalcharges': 3320.75
+      }
+      import requests ## to use the POST method we use a library named requests
+      url = 'http://localhost:9696/predict' ## this is the route we made for prediction
+      response = requests.post(url, json=customer) ## post the customer information in json format
+      result = response.json() ## get the server response
+      print(result)
+      ```
+- Until here we have seen how we make a simple web server that predicts the churn value for every user. When we run the app, we'll see a warning that it is not a **WGSI server** and not suitable for production environements. To fix this issue and run this as a production server there are plenty of ways available:
+  - One way to create a WSGI server is to use `gunicorn`. To install it use the command `pip install gunicorn` and to run the WGSI server we can simply run it with the command `gunicorn --bind 0.0.0.0:9696 predict:app`. Note that in **predict:app** the name predict is the name we set for our file containing the code `app = Flask('churn')` (for instance, in our case it's predict.py). We may need to change it to whatever we named our Flask app file.
+  - Windows users may not be able to use gunicorn library because windows system do not support some dependencies of the library. So to be able to run this on windows machine, there is an alternative library `waitress` and we can install it using the command `pip install waitress`.
+  - To run the waitress wgsi server, use the command `waitress-serve --listen=0.0.0.0:9696 predict:app`. After running this command we should be able to get the same result as gunicorn.
+- So until here we are able to make a production server that predicts the churn value for new customers. In the next section we'll see how to solve library version conflictions in each machine and manage the dependencies for production environments.
+
+## 5.5 Python Virtual Environment: Pipenv
+
+This section explains how to make virtual environment for our project. Let's understand what is a virtual environment and how to make it:
+
+- Everytime we're running a file from a directory, we're using the executive files from a global directory. For example, when we install Python on our machine the executable files that are able to run our codes will go to somewhere like */home/username/python/bin* and `pip` command may go to */home/username/python/bin/pip*.
+- Sometimes the versions of libraries conflict (the project may not run or it gets into massive errors). For example, we have an old project that uses sklearn library with the version of `0.24.1` and now we want to run another project using sklearn version `1.0.0`. We may get into errors because of the version conflict:
+  - To solve the conflict we can make virtual environments. Virtual environment is something that can separate the libraries installed in our system and the libraries with specified version we want our projects to run with. There are a lot of ways to create a virtual enironments. One of them are using `pipenv` library.
+  - pipenv is a library that can create a virtual enironment. To install this library just use the classic method `pip install pipenv`.
+  - After installing pipenv we can install the libraries we want for our project in the new virtual environment. Which can be done with `pipenv install numpy sklearn==0.24.1 flask`.
+  - Note that using the pipenv command we make two files names *Pipfile* and *Pipfile.lock*. If we look into these files closely we can see that in Pipfile the libraries we installed are named. If we specified a library with its version, it's also specified in Pipfile.
+  - In *Pipfile.lock* we can see that each library with it's installed version is named and a hash file is there to reproduce if we move the environment to another machine.
+  - If we want to run the project in another machine, we can easily installed the libraries we want with the command `pipenv install`. This command will look into *Pipfile* and *Pipfile.lock* to install the libraries with specified version.
+  - After installing the required libraries we can run the project in the virtual environment with `pipenv shell` command. This will go to the virtual environment's shell and then any command we execute will use the virtual environment's libraries.
+- Until here we have made a virtual enivornment for our libraries with a required specified version. To separate this environment even more, such as making gunicorn be able to run in windows machines we need another way, which is using Docker. Docker allows us to separate everything more than creating usual virtual enironment way and make any project able to run on any machine that supports Docker smoothly.
+
+## 5.6 Environment Management: Docker
+
