@@ -27,7 +27,7 @@ To deploy the model in a server there are some steps:
     - In the code above we are making a binary file named **model.bin** and writing the *DictVectorizer* for one hot encoding and *model* as an array. (We save the file as binary to write bytes instead of text)
   - To be able to use the model in future without running the code, we need to read the binary file we saved previously:
     - ```python
-      with open('mode.bin', 'rb') as f_in:  ## Note that never open a binary file you do not trust!
+      with open('mode.bin', 'rb') as f_in:  ## Note that never open a binary file we do not trust!
           dv, model = pickle.load(f_in)
       ```
   - With unpacking the model and the DictVectorizer, we're able to making prediction for the new input values without training the model.
@@ -151,4 +151,83 @@ This section explains how to make virtual environment for our project. Let's und
 - Until here we have made a virtual enivornment for our libraries with a required specified version. To separate this environment even more, such as making gunicorn be able to run in windows machines we need another way, which is using Docker. Docker allows us to separate everything more than creating usual virtual enironment way and make any project able to run on any machine that supports Docker smoothly.
 
 ## 5.6 Environment Management: Docker
+
+### Installing Docker
+
+To isolate the project files from our system machine, we can use Docker. With Docker we are able to pack everything our project contains in the system that we want to run in any system machine. For example, if we want Ubuntu 20.4 we can have it in a mac or windows machine or other operating systems like linux.
+
+To get started with Docker for the churn prediction project we can follow the following instructions:
+
+**Docker Desktop (Ubuntu)**
+
+```
+sudo apt-get install docker.io
+```
+
+To run docker without `sudo`, follow these [instructions](https://docs.docker.com/engine/install/linux-postinstall/).
+
+**Docker Desktop (Windows)**
+
+To install the Docker on windows we can just follow the instructions by Andrew Lock in this [link](https://andrewlock.net/installing-docker-desktop-for-windows/).
+
+- Once our project is packed in a Docker container, we're able to run the project on any machine.
+- First we have to make a Docker image. The Docker image has the settings and dependencies we have in our project. To find Docker images that we need we can simply search the [Docker Hub](https://hub.docker.com/search?type=image).
+
+To run the python in the terminal, we need to entry `docker run -it --rm python:3.8.11-slim` command, where:
+  - `-it` to access python docker image in the terminal
+  - `--rm` remove the docker image after exit
+
+We can also get inside the python image by adding `--entrypoint=base`. This command will activate bash using the python docker image, like so:
+  - `docker run -it --rm --entrypoint=base python:3.8.11-slim`
+
+Here's what our Dockerfile contains (note: there should be no comments in Dockerfile, therefore, we need to remove the comments when we copy the code below):
+
+```
+# First install the base image (i.e., python 3.8), the slim version have less size
+FROM python:3.8.12-slim
+
+# Install pipenv library in Docker 
+RUN pip install pipenv
+
+# We have created a directory in Docker named app and we're using it as our working directory 
+WORKDIR /app                                                                
+
+# Copy the Pip files into our working derectory 
+COPY ["Pipfile", "Pipfile.lock", "./"]
+
+# Install the pipenv dependencies we had from the project and deploy them 
+RUN pipenv install --deploy --system
+
+# Copy any python files and the model we had to the working directory of Docker 
+COPY ["*.py", "model_C=1.0.bin", "./"]
+
+# We need to expose the 9696 port because we're not able to communicate with Docker outside it
+EXPOSE 9696
+
+# If we run the Docker image, we want our churn app to be running
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
+```
+
+If we don't put the last line `ENTRYPOINT`, we will be in a python shell. Note that for the entrypoint, we put our commands in double quotes.
+
+After creating the Dockerfile, we need to build it:
+```
+docker build -t churn-prediction . # dot means cwd
+```
+  - We use `-t` flag for specifying the tag name which is `churn-prediction` in our case.
+
+To run it, execute the command below:
+
+```
+docker run -it -p 9696:9696 churn-prediction:latest
+```
+
+Here we use:
+
+-  `-it` in order to the Docker run from terminal and shows the result.
+-  `-p` to map the 9696 port of the Docker to 9696 port of our machine. (First 9696 is the port number of our machine and the last one is Docker container port).
+
+At last we've deployed the prediction app inside a Docker container.
+
+## 5.7 Deployment to the Cloud: AWS Elastic Beanstalk (optional)
 
