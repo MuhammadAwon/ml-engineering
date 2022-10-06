@@ -97,7 +97,7 @@ In this section we'll implement the functionality of prediction to our churn web
 
       return jsonify(result)  ## send back the data in json format to the user
       ```
-  - The whole code above is available in the link: ???? (predict.py)
+  - The whole code above is available in [predict.py](https://github.com/MuhammadAwon/ml-engineering/blob/main/05-deployment/code/predict.py)
   - At last we run the code to see the result. It can't use a simple request in web browser, therefore, we can run the following code to post a new user data and see the response:
     - ```python
       ## a new customer informations
@@ -235,7 +235,7 @@ Instructions to create an account on AWS can be found [here](https://mlbookcamp.
 
 We can follow along these [instructions](PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) to deploy our app in AWS Elastic Beanstalk. Let's find it out another way how to deploy it in Heroku.
 
-- First we create web service with flask. (example file: ????)
+- First we create web service with flask. (example file: [predict.py](https://github.com/MuhammadAwon/ml-engineering/blob/main/05-deployment/code/predict.py))
 - Then we create a file *requirements.txt* which accesses the required dependencies to run our app. For example:
   - ```
     pickle
