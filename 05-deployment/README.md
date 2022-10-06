@@ -231,3 +231,48 @@ At last we've deployed the prediction app inside a Docker container.
 
 ## 5.7 Deployment to the Cloud: AWS Elastic Beanstalk (optional)
 
+Instructions to create an account on AWS can be found [here](https://mlbookcamp.com/article/aws).
+
+We can follow along these [instructions](PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) to deploy our app in AWS Elastic Beanstalk. Let's find it out another way how to deploy it in Heroku.
+
+- First we create web service with flask. (example file: ????)
+- Then we create a file *requirements.txt* which accesses the required dependencies to run our app. For example:
+  - ```
+    pickle
+    numpy
+    flask
+    gunicorn
+    ```
+- Create another file named *Procfile* and add the app we want to run there:
+  - ```
+    web: gunicorn churn_serving:app
+    ```
+  - Note that the name `churn_serving` in the above block is the name of our main python file that we're going to run.
+- Create the heroku profile and from the dashboard hit the *deploy* tab.
+- Next, follow the instructions to deploy app using heroku git.
+- If we have followed everything properly, our app will be live on heroku server.
+
+## 5.8 Summary
+
+In the session five we learned the following topics:
+
+- We learned how to save the model and load it to re-use the trained model to make predictions on new data.
+- How to deploy the model in a web service.
+- How to create a virtual environment.
+- How to create a container and run our code in any operating system.
+- How to implement our code in a public web service and access it from outside a local computer.
+
+In the next session we will learn the algorithms such as Decision trees, Random forests and Gradient boosting as an alternative way of combining decision trees.
+
+## 5.9 Explore More
+
+- Flask is not the only framework for creating web services. Try others, e.g., FastAPI
+- Experiment with other ways for managing environment, e.g., virtual env, conda, poetry.
+- Explore other ways of deploying web services, e.g. [GCP](https://cloud.google.com/gcp), [Azure](https://azure.microsoft.com/en-us/), [Heroku](https://www.heroku.com/), [PythonAnywhere](https://www.pythonanywhere.com/) etc.
+
+## Deployment Tutorials
+
+- [Using PythonAnywhere to host the Python Web App for free!! (an alternative to AWS/Azure/Google cloud)](https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-pythonanywhere.md)
+- [Deploy Churn Service on Heroku](https://github.com/razekmaiden/churn_service_heroku.git)
+- [Installing and using pipenv and Docker on Intel Macs](https://github.com/ziritrion/ml-zoomcamp/blob/main/notes/05b_virtenvs.md)
+- [Azure Guide](https://github.com/yusyel/azure#1-creating-azure-account)
