@@ -1,6 +1,6 @@
 ## Homework
 
-In this homework, we'll use Credit Card Data from the previous homework.
+In this homework, we'll use Credit Card Data from the [previous homework](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session4/session4-homework.ipynb).
 
 ## Question 1
 
