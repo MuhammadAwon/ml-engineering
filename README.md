@@ -86,7 +86,17 @@ Information to be added!
 
 ### 6. [Decision Trees and Ensemble Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees)
 
-Information to be added!
+- 6.1 Credit Risk Scoring Project
+- 6.2 Data Cleaning and Preparation
+- 6.3 Decision Trees
+- 6.4 Decision Tree Learning Algorithm
+- 6.5 Decision Trees Parameter Turning
+- 6.6 Ensemble Learning and Random Forest
+- 6.7 Gradient Boosting and XGBoost
+- 6.8 XGBoost Parameter Tuning
+- 6.9 Selecting the Best Model
+- 6.10 Summary
+- 6.11 Explore More
 
 ### 7. [Midterm Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-midterm-project)
 
