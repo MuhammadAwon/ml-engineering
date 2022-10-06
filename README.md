@@ -69,15 +69,16 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 5. [Deploying Machine Learning Models](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment)
 
-- 5.1 Session Overview
-- 5.2 Saving and Loading the Model
-- 5.3 Web Services: Introduction to Flask
-- 5.4 Serving the Churn Model with Flask
-- 5.5 Python Virtual Environment: Pipenv
-- 5.6 Environment Management: Docker
-- 5.7 Deployment to the Cloud: AWS Elastic Beanstalk (optional)
-- 5.8 Summary
-- 5.9 Explore More
+- 5.1 [Session Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#51-intro--session-overview)
+- 5.2 [Saving and Loading the Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#52-saving-and-loading-the-model)
+- 5.3 [Web Services: Introduction to Flask](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#53-web-services-introduction-to-flask)
+- 5.4 [Serving the Churn Model with Flask](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#54-serving-the-churn-model-with-flask)
+- 5.5 [Python Virtual Environment: Pipenv](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#55-python-virtual-environment-pipenv)
+- 5.6 [Environment Management: Docker](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#56-environment-management-docker)
+- 5.7 [Deployment to the Cloud: AWS Elastic Beanstalk](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#57-deployment-to-the-cloud-aws-elastic-beanstalk-optional) (optional)
+- 5.8 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#58-summary)
+- 5.9 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#59-explore-more)
+- [Deployment Tutorials](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#deployment-tutorials)
 
 ### 5b. BentoML
 
