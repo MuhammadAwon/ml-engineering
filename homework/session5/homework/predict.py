@@ -42,7 +42,6 @@ def predict():
     client = request.get_json()
 
     prediction = predict_single(client, dv, model)
-    card_decision = prediction >= 0.5
 
     # prepare response to send back to the browser
     result = float(round(prediction, 3))
