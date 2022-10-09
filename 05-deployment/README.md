@@ -231,26 +231,35 @@ At last we've deployed the prediction app inside a Docker container.
 
 ## 5.7 Deployment to the Cloud: AWS Elastic Beanstalk (optional)
 
-Instructions to create an account on AWS can be found [here](https://mlbookcamp.com/article/aws).
+To create AWS Elastic Beanstalk app, we need an AWS account if we don't have already. Instructions to create an account on AWS can be found [here](https://mlbookcamp.com/article/aws).
 
-We can follow along these [instructions](PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) to deploy our app in AWS Elastic Beanstalk. Let's find it out another way how to deploy it in Heroku.
+Elastic Beanstalk helps us deploy and manage web applications effieciently using load balancer. Which means it scales up or down according to the traffic demand.
 
-- First we create web service with flask. (example file: [predict.py](https://github.com/MuhammadAwon/ml-engineering/blob/main/05-deployment/code/predict.py))
-- Then we create a file *requirements.txt* which accesses the required dependencies to run our app. For example:
-  - ```
-    pickle
-    numpy
-    flask
-    gunicorn
+We need to install awsebcli tool to run our application on the AWS cloud. Following are the instructions to deploy the app with Elastic Beanstalk:
+
+- Install awsebcli using `pipenv install awsebcli --dev`
+  - This will install awsebcli only for development.
+- To initialize the project name (e.g. `churn-serving`) to run on docker platform in the specified region, we use the command `eb init -p docker -r eu-west-1 churn-serving`
+  - The above command will create a folder `./elasticbeanstalk` that contains a `config.yml` file.
+- To test the app works fine locally we use the command `eb local run --port 9696`
+  - This command will re-run `RUN pipenv install --system --deploy` from Dockerfile because we have updated Pipfile which includes awsebcli package.
+- Running `python predict-test.py` should return us the prediction.
+- To run our app on the cloud we'll need to create elastic beanstalk serving environment, which can be made with `eb create churn-serving-env`
+  - The host link will appear on the terminal, for instance: `churn-serving-env.eba-gg58yj4v.eu-west-1.elasticbeanstalk.com`
+- Next, we'll need to add the above link in `predict-test.py` file by replacing the url. We don't need to specify the port because elastic beanstalk will automatically map its port 80 with the app at port 9696. Below is the code block how this step will look like in the predict-test script:
+  - predict-test.py 
+    ```python
+    # eb host link
+    host = 'churn-serving-env.eba-gg58yj4v.eu-west-1.elasticbeanstalk.com'
+
+    # app url
+    url = f'http://{host}/predict'
     ```
-- Create another file named *Procfile* and add the app we want to run there:
-  - ```
-    web: gunicorn churn_serving:app
-    ```
-  - Note that the name `churn_serving` in the above block is the name of our main python file that we're going to run.
-- Create the heroku profile and from the dashboard hit the *deploy* tab.
-- Next, follow the instructions to deploy app using heroku git.
-- If we have followed everything properly, our app will be live on heroku server.
+- If everything is setup properly then running the file `predict-test.py` should return the customer prediction in the terminal.
+
+It is important to stop the eb server if we don't need it, otherwise it will keep adding the cost. Running `eb terminate churn-serving-env` in the terminal will stop the server.
+
+**Note**: The host link will be open to anyone and it can be used to send request. We should turn it down if we don't want it open to the entire public.
 
 ## 5.8 Summary
 
