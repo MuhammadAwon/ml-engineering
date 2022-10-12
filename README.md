@@ -132,3 +132,4 @@ Information to be added!
 - [HW2](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session2/session2-homework.ipynb)
 - [HW3](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session3/session3-homework.ipynb)
 - [HW4](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session4/session4-homework.ipynb)
+- [HW5](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework/session5/homework)
