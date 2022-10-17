@@ -86,39 +86,50 @@ Information to be added!
 
 ### 6. [Decision Trees and Ensemble Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees)
 
-- 6.1 Credit Risk Scoring Project
-- 6.2 Data Cleaning and Preparation
-- 6.3 Decision Trees
-- 6.4 Decision Tree Learning Algorithm
-- 6.5 Decision Trees Parameter Turning
-- 6.6 Ensemble Learning and Random Forest
-- 6.7 Gradient Boosting and XGBoost
-- 6.8 XGBoost Parameter Tuning
-- 6.9 Selecting the Best Model
-- 6.10 Summary
-- 6.11 Explore More
+- 6.1 [Credit Risk Scoring Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#61-session-overview-credit-risk-scoring-project)
+- 6.2 [Data Cleaning and Preparation](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#62-data-cleaning-and-preparation)
+- 6.3 [Decision Trees](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#63-decision-trees)
+- 6.4 [Decision Tree Learning Algorithm](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#64-decision-tree-learning-algorithm)
+- 6.5 [Decision Trees Parameter Turning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#65-decision-trees-parameter-tuning)
+- 6.6 [Ensemble Learning and Random Forest](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#66-ensembles-and-random-forest)
+- 6.7 [Gradient Boosting and XGBoost](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#67-gradient-boosting-and-xgboost)
+- 6.8 [XGBoost Parameter Tuning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#68-xgboost-parameter-tuning)
+- 6.9 [Selecting the Best Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#69-selecting-the-final-model)
+- 6.10 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#610-summary)
+- 6.11 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#611-explore-more)
 
-### 7. [Midterm Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-midterm-project)
+### 7. [Production-Ready Machine Learning (Bento ML)](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/07-bentoml-production)
 
-Information to be added!
+- 7.1 Intro/Session Overview
+- 7.2 Building Your Prediction Service with BentoML
+- 7.3 Deploying Your Prediction Service
+- 7.4 Sending, Receiving and Validating Data
+- 7.5 High-Performance Serving
+- 7.6 Bento Production Deployment
+- 7.7 (Optional) Advanced Example: Deploying Stable Diffusion Model
+- 7.8 Summary
 
-### 8. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
-
-Information to be added!
-
-### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
-
-Information to be added!
-
-### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
-
-Information to be added!
-
-### 11. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
+### 8. [Midterm Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-midterm-project)
 
 Information to be added!
 
-### 12. Capstone Project
+### 9. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
+
+Information to be added!
+
+### 10. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
+
+Information to be added!
+
+### 11. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
+
+Information to be added!
+
+### 12. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
+
+Information to be added!
+
+### 13. Capstone Project
 
 Information to be added!
 
