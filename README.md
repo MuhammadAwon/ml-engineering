@@ -80,10 +80,6 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 5.9 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#59-explore-more)
 - [Deployment Tutorials](https://github.com/MuhammadAwon/ml-engineering/tree/main/05-deployment#deployment-tutorials)
 
-### 5b. BentoML
-
-Information to be added!
-
 ### 6. [Decision Trees and Ensemble Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees)
 
 - 6.1 [Credit Risk Scoring Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#61-session-overview-credit-risk-scoring-project)
