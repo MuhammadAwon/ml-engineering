@@ -105,33 +105,22 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 7.7 (Optional) Advanced Example: Deploying Stable Diffusion Model
 - 7.8 Summary
 
-### 8. [Midterm Project](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-midterm-project)
+### 8. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
 
 Information to be added!
 
-### 9. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
+### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
 
 Information to be added!
 
-### 10. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
+### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
 Information to be added!
 
-### 11. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
+### 11. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
 
 Information to be added!
 
-### 12. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
-
-Information to be added!
-
-### 13. Capstone Project
-
-Information to be added!
-
-### 14. Second Capstone Project (optional)
-
-Information to be added!
 
 ### [Homework](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework)
 
