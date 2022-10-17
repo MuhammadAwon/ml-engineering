@@ -148,7 +148,7 @@ Generally, XGBoost models perform better on tabular data than other machine lear
 - Random forest is a way of combininig multiple decision trees. It should have a diverse set of models to make good predictions.
 - Gradient boosting trains model sequentially: each model tries to fix errors of the previous model. XGBoost is an implementation of gradient boosting.
 
-## Explore More
+## 6.11 Explore More
 
 - For this dataset we didn't do EDA or feature engineering. You can do it to get more insights into the problem.
 - For random forest, there are more parameters that we can tune. Check `max_features` and `bootstrap`.
