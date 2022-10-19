@@ -84,7 +84,7 @@ pathspec==0.10.1
 pep517==0.13.0
 pickleshare==0.7.5
 Pillow==9.2.0
-pip==22.2.2
+pip==22.3
 pip-tools==6.9.0
 pipenv==2022.10.12
 platformdirs==2.5.2
