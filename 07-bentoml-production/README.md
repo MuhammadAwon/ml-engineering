@@ -47,7 +47,7 @@ import bentoml
 from bentoml.io import JSON
 
 
-# Pull the model as model reference (it pulls all the associate mata data of the model)
+# Pull the model as model reference (it pulls all the associate metadata of the model)
 model_ref = bentoml.xgboost.get('credit_risk_model:latest')
 # Call DictVectorizer object using model reference
 dv = model_ref.custom_objects['DictVectorizer']
@@ -126,19 +126,19 @@ Important thing to note here is that the version of the XGBoost in the `framewor
 The next we want to do is, creating the file `bentofile.yaml`:
 
 ```yaml
-service: "service.py:svc" # Same as the argument passed to `bentoml serve`
+service: "service.py:svc" # Specify entrypoint and service name
 labels: # Labels related to the project for reminder (the provided labels are just for example)
   owner: bentoml-team
   project: gallery
 include:
-- "*.py" # A pattern for matching which files to include in the bento
+- "*.py" # A pattern for matching which files to include in the bento build
 python:
   packages: # Additional pip packages required by the service
     - xgboost
     - sklearn
 ```
 
-Once we have our `service.py` and `bentofile.yaml` ready we can build the bento by running the command `bentoml build`. It will look in the service.py file to get all models being used and into bentofile.yaml file to get all the dependencies and creates one single deployable directory for us. The output will look something like this:
+Once we have our `service.py` and `bentofile.yaml` files ready we can build the bento by running the command `bentoml build`. It will look in the service.py file to get all models being used and into bentofile.yaml file to get all the dependencies and creates one single deployable directory for us. The output will look something like this:
 
 ```bash
 Successfully built Bento(tag="credit_risk_classifier:kdelkqsqms4i2b6d")
@@ -173,10 +173,21 @@ We can look into this directory by locating `cd ~/bentoml/bentos/credit_risk_cla
 
 The idea behind the structure like this is to provide standardized way that a machine learning service might required.
 
-Now the last thing we need to do is to build the docker image. This can be done with `bentoml containerize credit_risk_classifier:kdelkqsqms4i2b6d`. Once the docker image is built successfully, we can run the following command to see it everything is working as expected:
+Now the last thing we need to do is to build the docker image. This can be done with `bentoml containerize credit_risk_classifier:kdelkqsqms4i2b6d`.
+
+> Note: We need to have Docker installed before running this command.
+
+Once the docker image is built successfully, we can run the following command to see if everything is working as expected:
 
 ```bash
-
+docker run -it --rm -p 3000:3000 containerize credit_risk_classifier:kdelkqsqms4i2b6d
 ```
 
-**Reference:
+We are exposing 3000 port to map with the service port which is also 3000. Now this should take us to Swagger UI page again.
+
+**Reference**:
+
+- [Tutorial: Intro to BentoML](https://docs.bentoml.org/en/latest/tutorial.html)
+
+## 7.4 Sending, Receiving and Validating Data
+
