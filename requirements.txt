@@ -102,6 +102,7 @@ prompt-toolkit==3.0.20
 psutil==5.9.3
 pure-eval==0.2.2
 pycparser==2.21
+pydantic==1.10.2
 Pygments==2.11.2
 pynvml==11.4.1
 pyparsing==3.0.9
