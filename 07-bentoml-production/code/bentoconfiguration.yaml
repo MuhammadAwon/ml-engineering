@@ -1,0 +1,6 @@
+# Config file controls the attributes of the runner
+runners:
+  batching:
+    enabled: true
+    max_batch_size: 100
+    max_latency_ms: 500

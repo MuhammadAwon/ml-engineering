@@ -1,11 +1,10 @@
 service: "service:svc"
 labels:
   owner: awon
-  project: bento-credit-classifier
+  project: bento-cool-classifier
 include:
 - "*.py"
 python:
   packages:
-    - xgboost
     - sklearn
-    - pydantic
+
