@@ -177,13 +177,7 @@ Now the last thing we need to do is to build the docker image. This can be done 
 
 > Note: We need to have Docker installed before running this command.
 
-Once the docker image is built successfully, we can run the following command to see if everything is working as expected:
-
-```bash
-docker run -it --rm -p 3000:3000 containerize credit_risk_classifier:kdelkqsqms4i2b6d
-```
-
-We are exposing 3000 port to map with the service port which is also 3000. Now this should take us to Swagger UI page again.
+Once the docker image is built successfully, we can run `docker run -it --rm -p 3000:3000 containerize credit_risk_classifier:kdelkqsqms4i2b6d` to see if everything is working as expected. We are exposing 3000 port to map with the service port which is also 3000 and this should take us to Swagger UI page again.
 
 **Reference**:
 
@@ -191,3 +185,196 @@ We are exposing 3000 port to map with the service port which is also 3000. Now t
 
 ## 7.4 Sending, Receiving and Validating Data
 
+Data validation is another great feature on BentoML that ensures the data transferation is valid and reliable. We can integrate Python library Pydatic with BentoML for this purpose.
+
+Pydantic can be installed with `pip install pydantic`, after that we need to import the `BaseModel` class from the library and create our custom class for data validation:
+
+```python
+# Create pydantic base class to create data schema for validation
+class CreditApplication(BaseModel):
+    seniority: int
+    home: str
+    time: int
+    age: int
+    marital: str
+    records: str
+    job: str
+    expenses: int
+    income: float
+    assets: float
+    debt: float
+    amount: int
+    price: int
+```
+
+Our model is trained on 13 features of different data types and the BaseModel will ensure that we are always recieving them for the model prediction.
+
+Next we need to implement pass the class in our bentoml service:
+
+```python
+# Pass pydantic class in the application
+@svc.api(input=JSON(pydantic_model=CreditApplication), output=JSON()) # decorate endpoint as in json format for input and output
+def classify(credit_application):
+    # transform pydantic class to dict to extract key-value pairs 
+    application = credit_application.dict()
+    # transform data from client using dictvectorizer
+    vector = dv.transform(application)
+    # make predictions using 'runner.predict.run(input)' instead of 'model.predict'
+    prediction = model_runner.predict.run(vector) 
+```
+
+Along the `JSON()`, BentoML uses various other descriptors in the input and output specification of the service api, for example, NumpyNdarray(), PandasDataFrame(), Text(), and many more.
+
+**Reference**:
+
+- [Pydantic Manual](https://pydantic-docs.helpmanual.io/)
+- [BentoML API IO Descriptors](https://docs.bentoml.org/en/latest/reference/api_io_descriptors.html)
+
+## 7.5 High Performance Model Serving
+
+BentoML can optimize the performance on our application where the model will have to make predictions on hundreds of requests per seconds. For this we need to install locust (`pip install locust`), which is a Python open-source library for load testing.
+
+Once the locust is installed, we'll need to create `locustfile.py` and implement user flows for testing:
+
+```python
+import numpy as np
+from locust import task
+from locust import between
+from locust import HttpUser
+
+
+# Sample data to send
+sample = {"seniority": 3,
+ "home": "owner",
+ "time": 36,
+ "age": 26,
+ "marital": "single",
+ "records": "no",
+ "job": "freelance",
+ "expenses": 35,
+ "income": 0.0,
+ "assets": 60000.0,
+ "debt": 3000.0,
+ "amount": 800,
+ "price": 1000
+ }
+
+# Inherit HttpUser object from locust
+class CreditRiskTestUser(HttpUser):
+    """
+    Usage:
+        Start locust load testing client with:
+            locust -H http://localhost:3000, in case if all requests failed then load client with:
+            locust -H http://localhost:3000 -f locustfile.py
+
+        Open browser at http://0.0.0.0:8089, adjust desired number of users and spawn
+        rate for the load test from the Web UI and start swarming.
+    """
+
+    # create mathod with task decorator to send request
+    @task
+    def classify(self):
+        self.client.post("/classify", json=sample) # post request in json format with the endpoint 'classify'
+
+    wait_time = between(0.01, 2) # set random wait time between 0.01-2 secs
+```
+
+This first optimization we can implement in our application is called *async* optimization. This will make the application to process the requests in parallel and the model will make predictions simultaneously:
+
+```python
+# Define an endpoint on the BentoML service
+# pass pydantic class application
+@svc.api(input=JSON(pydantic_model=CreditApplication), output=JSON()) # decorate endpoint as in json format for input and output
+async def classify(credit_application): # parallelized requests at endpoint level (async)
+    # transform pydantic class to dict to extract key-value pairs 
+    application = credit_application.dict()
+    # transform data from client using dictvectorizer
+    vector = dv.transform(application)
+    # make predictions using 'runner.predict.run(input)' instead of 'model.predict'
+    prediction = await model_runner.predict.async_run(vector) # bentoml inference level parallelization (async_run)
+```
+
+Another optimization is to take advantage of micro-batching. This is another BentoML feature where it can combine the data coming from multiple users and combine them into **one array**, and then this array will be batched into smaller batches when the model prediction is called. There are few steps we need to do to enable this functionality, the first thing we have to save the model with bentoml `signatures` feature:
+
+```python
+# Save the model batchable settings for production efficiency
+bentoml.xgboost.save_model('credit_risk_model',
+                            model,
+                            custom_objects={'DictVectorizer': dv},
+                           signatures={  # model signatures for runner inference
+                               'predict': { 
+                                   'batchable': True, 
+                                   'batch_dim': 0 # '0' means bentoml will concatenate request arrays by first dimension
+                               }
+                           })
+```
+
+Running `bentoml serve --production` will make the batchable model in serving, the `--production` flag will enable more than one process for our web workers.
+
+> Note: In general, we are not supposed to be running the traffic generator on same machine that is serving the application requests because that takes away the CPU from the requests server.
+
+**Resources**:
+
+- [Locust documentation](https://locust.io/)
+- [BentoML Adaptive Batching](https://docs.bentoml.org/en/latest/guides/batching.html)
+- [BentoML Runners Usage](https://docs.bentoml.org/en/latest/concepts/runner.html)
+
+## 7.6 Bento Production Deployment
+
+In this lession we'll deploy our model to Amazon ECS (Elastic Container Service). This service makes it easy for us to deploy and scale our containerized applications.
+
+First thing we need is to get our model tag that we want to used to create docker image, or we can simply run `bentoml build` to get the latest tag. Then we will create docker container using `bentoml containerize model:tag --platform=linux/amd64`, the option --plaform=linux/amd64 will prevent us from getting any deployment issues on ECS.
+
+Once the container is built, we need to setup ECR container repository where we can store the docker image:
+
+- Create Identity and Access Management (IAM) user.
+- Get the Security credentials (if don't have already):
+  - From top right drop-down menu > Security credentials > Access keys
+- Install AWS CLI.
+- Connect AWS with local machine by running `aws configure` command to provide credentials.
+- Create Amazon Elastic Container Registry (ECR):
+  - Click Get Started > General settings > Create repository
+- Authenticate and push docker image to ECR:
+  - Click on the repo name > View push commands > follow the instructions and tag the docker image built with bentoml (skip the step 2 because we have already built the docker image).
+
+Now we need to setup Amazon Elastic Container Service (ECS) to run our docker image:
+
+- Search and click Elastic Container Service in the search bar.
+- Create and Configure Cluster:
+  - Click Create Cluster > Networking only (CPU only) > follow the instructions.
+- Create Task Definitions:
+  - Click Create new Task Definition > FARGRATE > Task memory (0.5GB), Task CPU (0.25 vCPU) > Add container (follow instructions and paste the image URI of ECR repo into the *Image* section, also increase the *Soft limit* to 256 and set *Port mappings* to 3000) > create task
+- Run the Task:
+  - From ECS dashboard > Clusters > select the cluster we just created > Tasks > Run new Task > follow instructions (also select *Launch type* FARGATE, *Operating system family* Linux, *Security groups* set custom tcp to 3000) > create Task
+
+Once the Task is running we can click on it to see all of the information including the *Public IP* which we can entry in the browser to access the service.
+
+If we want to share the model or saving it to cloud, we can do so with `bentoml export model:tag path_to_save_file` command and with this we can save the model in a local or push the model on save in the cloud (e.g., on Amazon S3 bucket).
+
+In addition we can also import bentoml models from cloud or other sources using `bentoml import path_to_access_file`.
+
+**References**:
+
+- [ML Bookcamp article to Get Started with AWS and Creating IAM ROle](https://mlbookcamp.com/article/aws)
+- [AWS CLI installation instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+## 7.7 (Optional) Advanced Example: Deploying Stable Diffusion Model
+
+This lesson is about deploying an open-source model on Amazon Elastic Compute Cloud (EC2). The model is called Stable Diffusion which takes prompt as text and/or image from the user and transform it into an image.
+
+BentoML has a nice user-friendly instructions on their GitHub page to use the model and deploy it on EC2.
+
+**Link**: [Serving Stable Diffusion with BentoML](https://github.com/bentoml/stable-diffusion-bentoml)
+
+## 7.8 Summary
+
+Here's the summary of what we have gone through in the session 7:
+
+- Building a prediction service
+- Deploying our prediction service
+- Sending, Receiving and Validating Data
+- High performance serving
+- Bento production deployment
+- Advanced example: Deploying Stable Diffusion
+
+**Link**: [BentoML GitHub page](https://github.com/bentoml/BentoML)
