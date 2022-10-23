@@ -130,3 +130,4 @@ Information to be added!
 - [HW4](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session4/session4-homework.ipynb)
 - [HW5](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework/session5/homework)
 - [HW6](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session6/session6-homework.ipynb)
+- [HW7](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework/session7/homework7)
