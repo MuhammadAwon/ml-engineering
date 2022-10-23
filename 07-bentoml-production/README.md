@@ -311,6 +311,17 @@ bentoml.xgboost.save_model('credit_risk_model',
 
 Running `bentoml serve --production` will make the batchable model in serving, the `--production` flag will enable more than one process for our web workers.
 
+We can also configure the batching parameters of the runner by creating `bentoconfiguration.yaml` file:
+
+```python
+# Config file controls the attributes of the runner
+runners:
+  batching:
+    enabled: true
+    max_batch_size: 100
+    max_latency_ms: 500
+```
+
 > Note: In general, we are not supposed to be running the traffic generator on same machine that is serving the application requests because that takes away the CPU from the requests server.
 
 **Resources**:
