@@ -1,4 +1,4 @@
-# This script is for deployment
+# This script is used for production
 # credit_risk_classifier:lzbdkucrgwe4my5i (bento production model)
 
 import bentoml
