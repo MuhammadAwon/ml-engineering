@@ -360,9 +360,9 @@ Now we need to setup Amazon Elastic Container Service (ECS) to run our docker im
 
 Once the Task is running we can click on it to see all of the information including the *Public IP* which we can entry in the browser to access the service.
 
-If we want to share the model or saving it to cloud, we can do so with `bentoml export model:tag path_to_save_file` command and with this we can save the model in a local or push the model on save in the cloud (e.g., on Amazon S3 bucket).
+If we want to share the model or saving it to cloud, we can do so with `bentoml export model:tag path_to_store/modelname.bento` command and with this we can save the model in a local or push the model on save in the cloud (e.g., on Amazon S3 bucket). Beside the native .bento format, we can also save the model in `('tar')`, `tar.gz ('gz')`, `tar.xz ('xz')`, `tar.bz2 ('bz2')`, and `zip`.
 
-In addition we can also import bentoml models from cloud or other sources using `bentoml import path_to_access_file`.
+In addition we can also import bentoml models from cloud or other sources using `bentoml import path_to_access_/model_name.bento`.
 
 **References**:
 
