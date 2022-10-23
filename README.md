@@ -94,16 +94,16 @@ This repository contains all the coursework I am going through from [Machine Lea
 - 6.10 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#610-summary)
 - 6.11 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/06-trees#611-explore-more)
 
-### 7. [Production-Ready Machine Learning (Bento ML)](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/07-bentoml-production)
+### 7. [Production-Ready Machine Learning (Bento ML)](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#7-bentoml-production)
 
-- 7.1 Intro/Session Overview
-- 7.2 Building Your Prediction Service with BentoML
-- 7.3 Deploying Your Prediction Service
-- 7.4 Sending, Receiving and Validating Data
-- 7.5 High-Performance Serving
-- 7.6 Bento Production Deployment
-- 7.7 (Optional) Advanced Example: Deploying Stable Diffusion Model
-- 7.8 Summary
+- [7.1 Intro/Session Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#71-intro-and-overview)
+- [7.2 Building Your Prediction Service with BentoML](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#72-build-bento-service)
+- [7.3 Deploying Your Prediction Service](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#73-deploy-bento-service)
+- [7.4 Sending, Receiving and Validating Data](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#74-sending-receiving-and-validating-data)
+- [7.5 High-Performance Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#75-high-performance-model-serving)
+- [7.6 Bento Production Deployment](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#76-bento-production-deployment)
+- [7.7 (Optional) Advanced Example: Deploying Stable Diffusion Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#77-optional-advanced-example-deploying-stable-diffusion-model)
+- [7.8 Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/07-bentoml-production#78-summary)
 
 ### 8. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
 
