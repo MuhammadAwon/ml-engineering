@@ -2,9 +2,9 @@
 
 ## 7.1 Intro and Overview
 
-The goal of this session is to build and deploy an ML service, customize our service to fit our use case, and make our service production ready with the open-source library BentoML. For this, we'll be using the model we built in session 6.
+The goal of this session is to build and deploy an ML service, customize our service to fit our use case, and make our service production-ready with the open-source library BentoML. For this, we'll be using the model we built in session 6.
 
-What is production ready?
+What is production-ready?
 
 - `Scalability`: it is the ability to increase or decrease the resources of the application according to the user demands.
 - `Operationally efficiency`: it is being able to maintain the service by reducing the time, efforts and resources as much as possible without compromising the high-quality.
