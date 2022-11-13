@@ -202,7 +202,7 @@ history = model.fit(train_ds, epochs=10, validation_data=val_ds)
 - `flow_from_directory()`: method to read the images directly from the directory
 - `next(train_ds)`: to unpack features and target variables
 - `train_ds.class_indices`: attribute to get classes according to the directory structure
-- `GlobalAveragePooling2D()`: accepts 4D tensor as input and operates the mean on the height and width dimensionalities for all the channels and returns vectors
+- `GlobalAveragePooling2D()`: accepts 4D tensor as input and operates the mean on the height and width dimensionalities for all the channels and returns vector representation of all images
 - `CategoricalCrossentropy()`: method to produces a one-hot array containing the probable match for each category in multi classification
 - `model.fit()`: method to train model
 - `epochs`: number of iterations over all of the training data
