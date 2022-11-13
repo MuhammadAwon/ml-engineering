@@ -107,7 +107,21 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 8. [Neural Networks and Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning)
 
-Information to be added!
+- 8.1 [Fashion Classification](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#81-fashion-classification)
+- 8.1b [Setting Up the Environment on Saturn Cloud](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#81b-setting-up-the-environment-on-saturn-cloud)
+- 8.2 [TensorFlow and Keras](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#82-tensorflow-and-keras)
+- 8.3 [Pre-Trained Convolutional Neural Networks](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#83-pre-trained-convolutional-neural-networks)
+- 8.4 [Convolution Neural Networks](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#84-convolutional-neural-networks)
+- 8.5 [Transfer Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#85-transfer-learning)
+- 8.6 [Adjusting the Learning Rate](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#86-adjusting-the-learning-rate)
+- 8.7 [Checkpointing](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#87-checkpointing)
+- 8.8 [Adding More Layers](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#88-adding-more-layers)
+- 8.9 [Regularization and Dropout](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#89-regularization-and-dropout)
+- 8.10 [Data Augmentation](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#810-data-augmentation)
+- 8.11 [Training a Larger Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#811-training-a-larger-model)
+- 8.12 [Using the Model](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#812-using-the-model)
+- 8.13 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#813-summary)
+- 8.14 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/08-deep-learning#814-explore-more)
 
 ### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
 
