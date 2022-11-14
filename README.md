@@ -125,7 +125,15 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
 
-Information to be added!
+- 9.1 Introduction to Severless
+- 9.2 AWS Lambda
+- 9.3 TensorFlow Lite
+- 9.4 Preparing the Code for Lambda
+- 9.5 Preparing a Docker Image
+- 9.6 Creating the Lambda Function
+- 9.7 API Gateway: Exposing the Lambda Function
+- 9.8 Summary
+- 9.9 Explore More
 
 ### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
