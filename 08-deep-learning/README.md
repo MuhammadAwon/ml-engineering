@@ -1,4 +1,4 @@
-# Neural Networks and Deep Learning
+# 8. Neural Networks and Deep Learning
 
 ## 8.1 Fashion Classification
 
