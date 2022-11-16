@@ -101,8 +101,63 @@ result = requests.post(url, json=data).json()
 print(result)
 ```
 
+Now we can build the docker image using the command `docker build -t clothing-model .` and run the docker container with `docker run -it --rm -p 8080:8080 clothing-model:latest`. If everything is configured properly, we should see the predictions in the terminal with the command `python test.py`.
+
 **Reference**:
 
 - Download AWS lambda base image: https://gallery.ecr.aws/lambda/python
 - Install tflite for AWS lambda: https://github.com/alexeygrigorev/tflite-aws-lambda/tree/main/tflite
+
+## 9.6 Creating the Lambda Function
+
+In order to deploy the docker container as lambda function we need to following these steps:
+
+- **Publishing the image to AWS ECR**
+
+  - Install awscli (`pip install awscli`) and configure with the credentials
+  - Create ECR repository with the command `aws ecr create-repository --repository-name clothing-tflite-images` and copy the Repository URI address (need it for later)
+  - Create a script of variables from Repository URI:
+    - ```bash
+      ACCOUNT=2278222782
+      REGION=ap-south-1
+      REGISTRY=clothing-tflite-images
+      PREFIX=${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${REGISTRY}
+
+      TAG=clothing-model-xception-v4-001
+      REMOTE_URI=${PREFIX}:${TAG}
+      ```
+  - Log in the registry using `aws ecr get-login --no-include-email | sed 's/[0-9a-zA-z=]\{20,\}/PASSWORD/g'` (hiding the password used sed and regex)
+  - To be able to login the registry and to push the docker image, execute the output of the above command with `$(aws ecr get-login --no-include-email)`
+  - Tag the docker image with URI `docker tag clothing-model:latest ${REMOTE_URI}`
+  - Push docker image to ECR `docker push ${REMOTE_URI}`
+
+- **Creating the Lambda Function**
+  
+  - Search for AWS Lambda from the sreach bar and select Create function
+  - Select Container image > Function name > Container image URI using the Browse images (select the docker image) > Create function
+  - Select Configuration > Increase Memory to 1024 and Timeout to 30 sec > Save
+  - Select Test to test the function > Add image url in the body (JSON) > Test
+
+**Reference**:
+
+- AWS ECR to create container registry: https://aws.amazon.com/ecr/
+- Create Lambda function: https://aws.amazon.com/lambda/
+- AWS Lambda pricing: https://aws.amazon.com/lambda/pricing/
+
+## 9.7 API Gateway: Exposing the Lambda Function
+
+We create the lambda function for our docker image, now we need to expose it using AWS API Gateway:
+
+- Search for api gateway > Create API > Select REST API > Settings (API name) > Create API
+- Select Create Resource from the drop-down of Actions button > Resource Name (e.g., predict, this will be the endpoint of the url) > Create Resource
+- Select Create Method from Actions > Select POST from drop-down of /predict > Select ok and then POST > Integration type (Lambda Function), Lambda Region, and Lambda Function name > Save
+- Click on TEST > Request Body (url of the image for prediction) > Hit Test
+- Select Deploy API from Actions > Deployment stage (New Stage), Stage name (test) > Deploy
+- Copy the Invoke URL and past in the `test.py`, be sure to add /predict at the end of the url, e.g., `https://01coolapi10.execute-api.ap-south-1.amazonaws.com/test/predict`
+
+**Reference**:
+
+- Create AWS API Gateway: https://aws.amazon.com/api-gateway/
+
+## 9.8 Summary
 
