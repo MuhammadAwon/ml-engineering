@@ -2,3 +2,4 @@ env/
 .ipynb_checkpoints/
 *.pyc
 08-deep-learning/clothing-dataset-small
+09-serverless/code/file.sh
