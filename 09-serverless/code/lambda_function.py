@@ -45,8 +45,12 @@ def predict(url):
     interpreter.set_tensor(input_index, X)
     interpreter.invoke()
     preds = interpreter.get_tensor(output_index)[0]
+
+    # Convert numpy array predictions into float type
+    # for conversion we need to convert array to python list first
+    float_preds = preds.tolist()
     
-    return dict(zip(classes, preds))
+    return dict(zip(classes, float_preds))
 
 # Create lambda function
 def lambda_handler(event, context):
