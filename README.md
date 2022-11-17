@@ -137,7 +137,16 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
-Information to be added!
+- 10.1 Overview
+- 10.2 TensorFlow Serving
+- 10.3 Creating a Preprocessing Service
+- 10.4 Running Everything Locally with Docker Compose
+- 10.5 Introduction to Kubernetes
+- 10.6 Deploying a Simple Service to Kubernetes
+- 10.7 Deploying TensorFlow Models to Kubernetes
+- 10.8 Deploying to EKS
+- 10.9 Summary
+- 10.10 Explore More
 
 ### 11. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
 
