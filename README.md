@@ -125,15 +125,15 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 9. [Severless Deep Learning](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless)
 
-- 9.1 Introduction to Severless
-- 9.2 AWS Lambda
-- 9.3 TensorFlow Lite
-- 9.4 Preparing the Code for Lambda
-- 9.5 Preparing a Docker Image
-- 9.6 Creating the Lambda Function
-- 9.7 API Gateway: Exposing the Lambda Function
-- 9.8 Summary
-- 9.9 Explore More
+- 9.1 [Introduction to Severless](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#91-introduction-to-severless)
+- 9.2 [AWS Lambda](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#92-aws-lambda)
+- 9.3 [TensorFlow Lite](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#93-tensorflow-lite)
+- 9.4 [Preparing the Code for Lambda](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#94-preparing-the-code-for-lambda)
+- 9.5 [Preparing a Docker Image](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#95-preparing-a-docker-image)
+- 9.6 [Creating the Lambda Function](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#96-creating-the-lambda-function)
+- 9.7 [API Gateway: Exposing the Lambda Function](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#97-api-gateway-exposing-the-lambda-function)
+- 9.8 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#98-summary)
+- 9.9 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/09-serverless#99-explore-more)
 
 ### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
