@@ -161,3 +161,13 @@ We create the lambda function for our docker image, now we need to expose it usi
 
 ## 9.8 Summary
 
+- AWS Lambda is way of deploying models without having to worry about servers
+- TensorFlow Lite is a lightweight alternative to TensorFlow that only focuses on inference
+- To deploy our code, package it in a Docker container
+- Expose the lambda function via API Gateway
+
+## 9.9 Explore More
+
+- Try similar serverless services from Google Cloud and Microsoft Azure
+- Deploy cats vs dogs and other Keras models with AWS Lambda
+- AWS Lambda is also good for other libraries, not just TensorFlow. You can deploy Scikit-Learn and XGBoost models with it as well
