@@ -35,6 +35,11 @@ TensorFlow is a large library of 1.2gb size, due to such larget volume it is not
 
 The solution to this is not to use TensorFlow but use lighter version of the libray which is TensorFlow Lite. TensorFlow Lite is not used to training the models and it only focuses on inference (i.e, model.predict(X)). To be able to use TensorFlow model we need to convert it to TensorFlow Lite.
 
+To preprocess images and run the model without TensorFlow, we need to install the following to libraries:
+
+- For image preprocess: `pip install keras-image-helper`
+- TFlite runtime: `pip install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
+
 **Reference**:
 
 - [TensorFlow Lite documentation](https://www.tensorflow.org/lite)
