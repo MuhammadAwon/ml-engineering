@@ -162,3 +162,4 @@ Information to be added!
 - [HW6](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session6/session6-homework.ipynb)
 - [HW7](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework/session7/homework7)
 - [HW8](https://github.com/MuhammadAwon/ml-engineering/blob/main/homework/session8/dino-or-dragon.ipynb)
+- [HW9](https://github.com/MuhammadAwon/ml-engineering/tree/main/homework/session9/homework9)
