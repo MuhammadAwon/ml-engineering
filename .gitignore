@@ -3,3 +3,4 @@ env/
 *.pyc
 08-deep-learning/clothing-dataset-small
 09-serverless/code/file.sh
+10-kubernetes/code/file.sh
