@@ -137,16 +137,17 @@ This repository contains all the coursework I am going through from [Machine Lea
 
 ### 10. [Kubernetes and TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes)
 
-- 10.1 Overview
-- 10.2 TensorFlow Serving
-- 10.3 Creating a Preprocessing Service
-- 10.4 Running Everything Locally with Docker Compose
-- 10.5 Introduction to Kubernetes
-- 10.6 Deploying a Simple Service to Kubernetes
-- 10.7 Deploying TensorFlow Models to Kubernetes
-- 10.8 Deploying to EKS
-- 10.9 Summary
-- 10.10 Explore More
+- 10.1 [Overview](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#101-overview)
+- 10.2 [TensorFlow Serving](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#102-tensorflow-serving)
+- 10.3 [Creating a Preprocessing Service](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#103-creating-a-preprocessing-service)
+- 10.4 [Running Everything Locally with Docker Compose](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#104-running-everything-locally-with-docker-compose)
+- 10.5 [Introduction to Kubernetes](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#105-introduction-to-kubernetes)
+- 10.6 [Deploying a Simple Service to Kubernetes](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#106-deploying-a-simple-service-to-kubernetes)
+- 10.7 [Deploying TensorFlow Models to Kubernetes](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#107-deploying-tensorflow-models-to-kubernetes)
+- 10.8 [Deploying to EKS](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#108-deploying-to-eks)
+- 10.9 [Summary](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#109-summary)
+- 10.10 [Explore More](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#1010-explore-more)
+- [Commands References](https://github.com/MuhammadAwon/ml-engineering/tree/main/10-kubernetes#command-references-used-in-the-session-10)
 
 ### 11. [KServe](https://github.com/MuhammadAwon/ml-engineering/tree/main/11-kserve)
 
