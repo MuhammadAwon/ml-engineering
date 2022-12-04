@@ -535,6 +535,9 @@ docker run -it --rm -p 9696:9696 ping:v001
 # create local kubernetes cluster
 kind create cluster
 
+# Check the status/info of the cluster
+kubectl cluster-info
+
 # list all pods in the namespace
 kubectl get pod
 # list all deployments
